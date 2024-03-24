@@ -1,0 +1,29 @@
+{
+  "name": "EXPRESS_CRASH_COURSE",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.19.1",
+    "moment": "^2.30.1",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tkivinen2024/EXPRESS_JS_CRASH_COURSE.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tkivinen2024/EXPRESS_JS_CRASH_COURSE/issues"
+  },
+  "homepage": "https://github.com/tkivinen2024/EXPRESS_JS_CRASH_COURSE#readme"
+}
