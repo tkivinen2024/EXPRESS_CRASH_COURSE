@@ -34,7 +34,10 @@ router.post('/', (req, res) => {
     }
     
     members.push(newMember);
-    res.json(members);
+    
+    // --- Shows Json
+    //res.json(members);
+    res.redirect('/');
 
 });
 
@@ -65,14 +68,22 @@ router.put('/:id', (req, res) => {
     }
 });
 
-        /*
-        members.forEach(member)> {
-            
-            if(member.id === parseInt(req.params.id)) {
-                member.name = req.body.name;
-                member.email.req.body.email;
-            }
-            */
+// ---------------------------------
+// --- Delete Member (57:30)
+// ---------------------------------
+router.delete('/:id', (req, res) => {
+    const found = members.some(member => member.id === parseInt(req.params.id));
+    if (found) {
+        //res.json(members.filter(member => member.id !== parseInt(req.params.id)));
+        res.json({
+            msg: 'Member deleted',
+            members: members.filter(member => member.id !== parseInt(req.params.id))
+        });
+
+    } else {
+        res.status(400).json({msg: `No Member with the id of ${req.params.id}`});
+    }
+});
 
 
 module.exports = router;
